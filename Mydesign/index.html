@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <base href="/">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="basic web design" />
+        <meta name="description" content="This is sample webdesigns using bootstrap">
+        <title>My First web design</title>
+
+        <!--Start : Included library css File -->
+        <link rel="stylesheet" type="text/css" src="lib/css/bootstrap.min.css" crossorigin="anonymous">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!--End : Included library css File -->
+
+        <!--Start : Included custome css File -->
+        <link rel="stylesheet" type="text/css" src="style.css" crossorigin="anonymous">
+        <!--End : Included custome css File -->
+        <style>
+            /* EXAMPLE 5 - Logo with Text*/
+            .myname .navbar-brand {
+                display: flex;
+                align-items: center;
+            }
+            .myname .navbar-brand>img {
+                padding: 7px 14px;
+            }
+            .myfooter {
+                background-color: #e7e7e7;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+            .mymiddle{
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+            .mycopy{
+                padding-top: 15px;
+                padding-bottom: 15px;
+                font-weight: bold;
+            }
+            .myfootertitle{
+                font-weight: bold;
+            }
+            .plan{
+                border:1px solid #778899;
+                padding:0px;
+                min-height:180px;
+            }
+            .plantitle {
+                padding:10px;
+                text-align:center;
+                padding:10px;
+                font-size: 20px;
+                font-weight: bold;
+                background-color:#CDCDCD;
+                border-bottom: 1px solid #778899
+            }
+            .plancontent{
+                padding:10px;
+                text-align:center;
+                text-emphasis: heigh;
+            }
+            .plancontent p{
+                 line-height: 1.1;
+            }
+            .price{
+                font-weight: bold;
+                font-size: 35px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container myname">
+                <div class="row">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                            <a class="navbar-brand" href="#">
+                                <img alt="Brand"  style="height:50px" src="/Mydesign/assets/images/logo.png">
+                            </a>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Login</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>                                 
+            </div>
+        </header>
+        <div class="container mymiddle">
+            <div class="row">
+                <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 text-center">
+                    <h3>What is Lorem Ipsum?</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="thumbnail plan">
+                        <div class="plantitle">Plan A</div>
+                        <div class="plancontent">
+                            <div class="price"> $500 / Hr </div>
+                            <p>500 users included</p>
+                            <p>10 GB of storage</p>                           
+                            <p>Email support</p>        
+                            <p>Help center access</p> 
+                            <button type="button" class="btn btn-primary btn-md btn-sm btn-xs btn-lg">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="thumbnail plan">
+                        <div class="plantitle">Plan B</div>
+                        <div class="plancontent">
+                            <div class="price"> $250 / Hr </div>
+                            <p>150 users included</p>
+                            <p>8 GB of storage</p>                           
+                            <p>Email support</p>        
+                            <p>Help center access</p>           
+                            <button type="button" class="btn btn-primary btn-md btn-sm btn-xs btn-lg">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="thumbnail plan">
+                        <div class="plantitle">Plan C</div>
+                        <div class="plancontent">
+                            <div class="price"> $150 / Hr </div>
+                            <p>100 users included</p>
+                            <p>5 GB of storage</p>                           
+                            <p>Email support</p>        
+                            <p>Help center access</p> 
+                            <button type="button" class="btn btn-primary btn-md btn-sm btn-xs btn-lg">Buy Now</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="thumbnail plan">
+                        <div class="plantitle">Plan D</div>
+                        <div class="plancontent">
+                            <div class="price"> $100 / Hr </div>
+                            <p>50 users included</p>
+                            <p>2 GB of storage</p>                           
+                            <p>Email support</p>        
+                            <p>Help center access</p> 
+                            <button type="button" class="btn btn-primary btn-md btn-sm btn-xs btn-lg">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container myfooter">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <h4>what is lorm</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <!-- Links -->
+                        <h5 class="text-uppercase myfootertitle">Features</h5>
+                            <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Cool stuff</a>
+                            </li>
+                            <li>
+                                <a href="#!">Random feature</a>
+                            </li>
+                            <li>
+                                <a href="#!">Team feature</a>
+                            </li>
+                            <li>
+                                <a href="#!">Stuff for developers</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <!-- Links -->
+                        <h5 class="text-uppercase myfootertitle">Resources</h5>
+                            <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Resource</a>
+                            </li>
+                            <li>
+                                <a href="#!">Resource name</a>
+                            </li>
+                            <li>
+                                <a href="#!">Another resource</a>
+                            </li>                            
+                        </ul>
+                    </div>                      
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <!-- Links -->
+                        <h5 class="text-uppercase myfootertitle">About us</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Team</a>
+                            </li>
+                            <li>
+                                <a href="#!">Locations</a>
+                            </li>
+                            <li>
+                                <a href="#!">Privacy</a>
+                            </li>
+                            <li>
+                                <a href="#!">Terms</a>
+                            </li>
+                            <li>
+                                <a href="#!">Another one</a>
+                            </li>
+                            <li>
+                                <a href="#!">Final resource</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mycopy">
+                        <!-- Copyright -->
+                        <div class="footer-copyright text-center">© 2018 Copyright:
+                            <a href="https://mdbootstrap.com/bootstrap-tutorial/"> Sample website</a>
+                        </div>
+                        <!-- Copyright -->
+                    </div>
+                </div>
+            </div>
+         </footer>
+        <!--Start : Included library js File -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>       
+        <script src="lib/js/bootstrap.min.js"></script>
+        <!--End : Included library js File -->
+    </body>
+</html>
