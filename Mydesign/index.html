@@ -173,12 +173,12 @@
         <!-- CAROUSEL INDICATORS HANDLEBARS TEMPLATE -->
 		<script id="carouselIndicator-template" type="text/x-handlebars-template"> 
 		    {{#carousels}}
-			<li data-target="#carousel-example-generic" data-slide-to="{{ slideid }}" class="{{activeStatus}}"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="{{ slideid }}" class="{{activeStatus}}"></li>
 			{{/carousels}}
 		</script>
         <!-- END CAROUSEL INDICATORS HANDLEBARS TEMPLATE -->
         <!-- HANDLEBARS PLANS TEMPLATE -->
-		<script id="plans-template" type="text/x-handlebars-template"> 
+        <script id="plans-template" type="text/x-handlebars-template">          
 		    {{#plans}}
 			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                 <div class="thumbnail plan {{activeStatus}}">
@@ -198,13 +198,14 @@
         <!-- END HANDLEBARS PLANS TEMPLATE  -->
 		<script>
             var carouseldata = {};
-            Handlebars.registerHelper('stringify', function(obj) {
-           /* text = Handlebars.Utils.escapeExpression(text);
+            Handlebars.registerHelper('printdata', function(obj) {
+            /* text = Handlebars.Utils.escapeExpression(text);
             url  = Handlebars.Utils.escapeExpression(url);
             var result = '<a href="' + url + '">' + text + '</a>';*/
 
             return new Handlebars.SafeString(JSON.stringify(obj));
             });
+            
             //Carousel
 			var source = $("#carousel-template").html();	
 			var template = Handlebars.compile(source);
@@ -220,7 +221,13 @@
                 timeout: 5000,              
                 success: function (data,status,xhr) {   // success callback function                    
                     if(status=="success"){
-                        carouseldata = data;                        
+                        // Start Sorting process                       
+                        var temp = Object.keys(data.carousels)
+                        .map(col => ({ key: col, value: data.carousels[col]}))                        
+                        .sort((a, b) => a.value.price < b.value.price);                        
+                        carouseldata.carousels = Object.values(temp).map(col => col.value);
+                        // End Sorting process
+
                         $('#carouselIndicators').html(templateIndicator(carouseldata));
                         $('#carouselInner').html(template(carouseldata));
                     }
@@ -242,14 +249,20 @@
                 timeout: 5000,              
                 success: function (data,status,xhr) {   // success callback function                    
                     if(status=="success"){
-                        planData = data;                      
+                        // Start Sorting process                       
+                        var temp = Object.keys(data.plans)
+                        .map(col => ({ key: col, value: data.plans[col]}))                        
+                        .sort((a, b) => a.value.planprice > b.value.planprice);
+                        planData.plans = Object.values(temp).map(col => col.value);
+                        // End Sorting process
+
                         $('#myplans').html(plantemplate(planData));
                     }
                 },
                 error: function (jqXhr, textStatus, errorMessage) { // error callback 
                     $('#myplans').html('<div class="alert alert-danger" role="alert">Plan details Error: ' + errorMessage +'</div>');
                 }
-            });                          
+            });                                    
 		</script> 				
     </body>
 </html>
