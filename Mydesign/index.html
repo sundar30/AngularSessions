@@ -6,78 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="basic web design" />
         <meta name="description" content="This is sample webdesigns using bootstrap">
-        <title>My First web design</title>
+        <title>Angular Sessions</title>
 
         <!--Start : Included library css File -->
-        <link rel="stylesheet" type="text/css" src="lib/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <!--End : Included library css File -->
-
+        
         <!--Start : Included custome css File -->
-        <link rel="stylesheet" type="text/css" src="style.css" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <!--End : Included custome css File -->
-
-        <style>
-            /* EXAMPLE 5 - Logo with Text*/
-            .myname .navbar-brand {
-                display: flex;
-                align-items: center;
-            }
-            .myname .navbar-brand>img {
-                padding: 7px 14px;
-            }
-            .myfooter {
-                background-color: #e7e7e7;
-                padding-top: 15px;
-                padding-bottom: 15px;
-            }
-            .mymiddle{
-                padding-top: 15px;
-                padding-bottom: 15px;
-            }
-            .mycopy{
-                padding-top: 15px;
-                padding-bottom: 15px;
-                font-weight: bold;
-            }
-            .myfootertitle{
-                font-weight: bold;
-            }
-            .plan{
-                border:1px solid #778899;
-                padding:0px;
-                min-height:180px;
-            }
-            .plantitle {
-                padding:10px;
-                text-align:center;
-                padding:10px;
-                font-size: 20px;
-                font-weight: bold;
-                background-color:#CDCDCD;
-                border-bottom: 1px solid #778899
-            }
-            .plancontent{
-                padding:10px;
-                text-align:center;
-                text-emphasis: heigh;
-            }
-            .plancontent p{
-                 line-height: 1.1;
-            }
-            .price{
-                font-weight: bold;
-                font-size: 35px;
-                padding-top: 5px;
-                padding-bottom: 5px;
-
-            }
-			.mycarousel{
-				padding-top: 15px;
-                padding-bottom: 15px;
-			}
-        </style>		
+		
     </head>
     <body>	
         <header>
@@ -113,19 +51,13 @@
             </div>
         </div>
 		<div class="container mycarousel">
-			<div class="row">
+			<div class="row" id="mycarousel">
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
-					<ol class="carousel-indicators">
-						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="3"></li>
-					</ol>
+					<ol id="carouselIndicators" class="carousel-indicators"></ol>
 
 					<!-- Wrapper for slides -->
-					<div class="carousel-inner" role="listbox">																		
-					</div>
+					<div id="carouselInner" class="carousel-inner" role="listbox"></div>
 					<!-- Controls -->
 					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -139,60 +71,9 @@
 			</div>
 		</div>		
         <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="thumbnail plan">
-                        <div class="plantitle">Plan A</div>
-                        <div class="plancontent">
-                            <div class="price"> $500 / Hr </div>
-                            <p>500 users included</p>
-                            <p>10 GB of storage</p>                           
-                            <p>Email support</p>        
-                            <p>Help center access</p> 
-                            <button type="button" class="btn btn-primary btn-md">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="thumbnail plan">
-                        <div class="plantitle">Plan B</div>
-                        <div class="plancontent">
-                            <div class="price"> $250 / Hr </div>
-                            <p>150 users included</p>
-                            <p>8 GB of storage</p>                           
-                            <p>Email support</p>        
-                            <p>Help center access</p>           
-                            <button type="button" class="btn btn-primary btn-md">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="thumbnail plan">
-                        <div class="plantitle">Plan C</div>
-                        <div class="plancontent">
-                            <div class="price"> $150 / Hr </div>
-                            <p>100 users included</p>
-                            <p>5 GB of storage</p>                           
-                            <p>Email support</p>        
-                            <p>Help center access</p> 
-                            <button type="button" class="btn btn-primary btn-md">Buy Now</button> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="thumbnail plan">
-                        <div class="plantitle">Plan D</div>
-                        <div class="plancontent">
-                            <div class="price"> $100 / Hr </div>
-                            <p>50 users included</p>
-                            <p>2 GB of storage</p>                           
-                            <p>Email support</p>        
-                            <p>Help center access</p> 
-                            <button type="button" class="btn btn-primary btn-md">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- START: My plan details will load here -->
+            <div class="row" id="myplans"></div>
+            <!-- END: My plan details will load here -->
         </div>
         <footer>
             <div class="container myfooter">
@@ -276,50 +157,99 @@
         <script src="lib/js/bootstrap.min.js"></script>
 		<!--End : Included library js File -->
 		<!-- CAROUSEL HANDLEBARS TEMPLATE -->
-		<script id="carousel-template" type="text/x-handlebars-template"> 
+        <script id="carousel-template" type="text/x-handlebars-template">           
 		    {{#carousels}}
 			<div class="item {{ activeStatus }}">
 				<img src="{{ imageUrl }}" alt="{{ mainTitle }}">
 				<div class="carousel-caption">
 					<h1> {{ mainTitle }} </h1>
-					<h3> {{ price }} </h3>
+					<h3> ${{ price }} / Month </h3>
 					<p> {{ description }}  </p>
 				</div>
 			</div>
 			{{/carousels}}
 		</script>
-		<!-- END CAROUSEL HANDLEBARS TEMPLATE -->
+        <!-- END CAROUSEL HANDLEBARS TEMPLATE -->
+        <!-- CAROUSEL INDICATORS HANDLEBARS TEMPLATE -->
+		<script id="carouselIndicator-template" type="text/x-handlebars-template"> 
+		    {{#carousels}}
+			<li data-target="#carousel-example-generic" data-slide-to="{{ slideid }}" class="{{activeStatus}}"></li>
+			{{/carousels}}
+		</script>
+        <!-- END CAROUSEL INDICATORS HANDLEBARS TEMPLATE -->
+        <!-- HANDLEBARS PLANS TEMPLATE -->
+		<script id="plans-template" type="text/x-handlebars-template"> 
+		    {{#plans}}
+			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                <div class="thumbnail plan {{activeStatus}}">
+                    <div class="plantitle"> {{ planname }}</div>
+                    <div class="plancontent">
+                        <div class="price"> ${{ planprice }} / Hr </div>
+                        <p>{{descriptions.desc1}}</p>
+                        <p>{{descriptions.desc2}}</p>                           
+                        <p>{{descriptions.desc3}}</p>        
+                        <p>{{descriptions.desc4}}</p> 
+                        <button type="button" class="btn btn-primary btn-md">{{ buttontext }}</button>
+                    </div>
+                </div>
+            </div>
+			{{/plans}}
+		</script>
+        <!-- END HANDLEBARS PLANS TEMPLATE  -->
 		<script>
+            var carouseldata = {};
+            Handlebars.registerHelper('stringify', function(obj) {
+           /* text = Handlebars.Utils.escapeExpression(text);
+            url  = Handlebars.Utils.escapeExpression(url);
+            var result = '<a href="' + url + '">' + text + '</a>';*/
+
+            return new Handlebars.SafeString(JSON.stringify(obj));
+            });
+            //Carousel
 			var source = $("#carousel-template").html();	
-			var template = Handlebars.compile(source);			
-			var carouseldata = { 
-				carousels: [ { 
-					imageUrl:"assets/images/img1.jpg",
-					mainTitle:"First Slide",
-					price:"$90 / Month",
-					activeStatus:"active",
-					description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-				}, {
-					imageUrl:"assets/images/img2.jpg",
-					mainTitle:"Second Slide",
-					price:"$70 / Month",
-					active:"",
-					description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-				}, {
-					imageUrl:"assets/images/img3.jpg",
-					mainTitle:"Third Slide",
-					price:"$50 / Month",
-					active:"",
-					description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-				}, {
-					imageUrl:"assets/images/img4.jpg",
-					mainTitle:"Fourth Slide",
-					price:"$30 / Month",
-					active:"",
-					description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-				} ]
-			}; 			
-			$('.carousel-inner').html(template(carouseldata));			
+			var template = Handlebars.compile(source);
+            //Carousel Indicator 
+            var sourceIndicator = $("#carouselIndicator-template").html();	
+			var templateIndicator = Handlebars.compile(sourceIndicator);
+
+            $('#carouselIndicators').html('<img id="loader-img" alt="" src="assets/images/loading.gif" width="100" height="100" align="center" />');
+
+            $.ajax('https://jsonblob.com/api/jsonBlob/b479c122-9c68-11e8-b69d-d94a56f70db4', 
+            {
+                dataType: 'json', // type of response data 
+                timeout: 5000,              
+                success: function (data,status,xhr) {   // success callback function                    
+                    if(status=="success"){
+                        carouseldata = data;                        
+                        $('#carouselIndicators').html(templateIndicator(carouseldata));
+                        $('#carouselInner').html(template(carouseldata));
+                    }
+                },
+                error: function (jqXhr, textStatus, errorMessage) { // error callback 
+                    $('#mycarousel').html('<div class="alert alert-danger" role="alert">Carousel details Error: ' + errorMessage +'</div>');
+                }
+            });            
+            
+            //Plan Details
+            var planData ={};
+            var plans = $("#plans-template").html();	
+			var plantemplate = Handlebars.compile(plans);
+            $('#myplans').html('<img id="loader-img" alt="" src="assets/images/loading.gif" width="100" height="100" align="center" />');
+
+            $.ajax('https://jsonblob.com/api/jsonBlob/1a455038-9c65-11e8-b69d-01b0f3f8d232', 
+            {
+                dataType: 'json', // type of response data 
+                timeout: 5000,              
+                success: function (data,status,xhr) {   // success callback function                    
+                    if(status=="success"){
+                        planData = data;                      
+                        $('#myplans').html(plantemplate(planData));
+                    }
+                },
+                error: function (jqXhr, textStatus, errorMessage) { // error callback 
+                    $('#myplans').html('<div class="alert alert-danger" role="alert">Plan details Error: ' + errorMessage +'</div>');
+                }
+            });                          
 		</script> 				
     </body>
 </html>

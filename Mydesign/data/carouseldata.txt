@@ -1,0 +1,31 @@
+var carouseldata = { 
+    carousels: [ {
+        slideid:0, 
+        imageUrl:"assets/images/img1.jpg",
+        mainTitle:"First Slide",
+        price:"$90 / Month",
+        activeStatus:"active",
+        description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    }, {
+        slideid:1,
+        imageUrl:"assets/images/img2.jpg",
+        mainTitle:"Second Slide",
+        price:"$70 / Month",
+        active:"",
+        description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    }, {
+        slideid:2,
+        imageUrl:"assets/images/img3.jpg",
+        mainTitle:"Third Slide",
+        price:"$50 / Month",
+        active:"",
+        description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    }, {
+        slideid:3,
+        imageUrl:"assets/images/img4.jpg",
+        mainTitle:"Fourth Slide",
+        price:"$30 / Month",
+        active:"",
+        description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    } ]
+};

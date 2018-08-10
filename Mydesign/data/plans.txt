@@ -1,0 +1,47 @@
+var planData = { 
+    plans: [ {
+        planid:1, 
+        planname:"Plan A",
+        planprice:"$500 / Hr",
+        descriptions: {
+            desc1: "500 users included",
+            desc2: "100 GB of storage",
+            desc3: "Email support",
+            desc4: "Help center access"
+        },
+        buttontext:"Buy Now"
+    }, {
+        planid:2, 
+        planname:"Plan B",
+        planprice:"$400 / Hr",
+        descriptions: {
+            desc1: "350 users included",
+            desc2: "70 GB of storage",
+            desc3: "Email support",
+            desc4: "Help center access"
+        },
+        buttontext:"Buy Now"
+    }, {
+        planid:3, 
+        planname:"Plan C",
+        planprice:"$250 / Hr",
+        descriptions: {
+            desc1: "150 users included",
+            desc2: "60 GB of storage",
+            desc3: "Email support",
+            desc4: "Help center access"
+        },
+        buttontext:"Buy Now"
+    }, {
+        planid:4, 
+        planname:"Plan D",
+        planprice:"$100 / Hr",
+        descriptions: {
+            desc1: "100 users included",
+            desc2: "45 GB of storage",
+            desc3: "Email support",
+            desc4: "Help center access"
+        },
+        buttontext:"Buy Now"
+    } ]
+};

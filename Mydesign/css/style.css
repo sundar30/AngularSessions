@@ -1,8 +1,75 @@
-/* EXAMPLE 5 - Logo with Text*/
-.example5 .navbar-brand {
+.myname .navbar-brand {
     display: flex;
     align-items: center;
-  }
-  .example5 .navbar-brand>img {
+}
+.myname .navbar-brand>img {
     padding: 7px 14px;
-  }
+}
+.myfooter {
+    background-color: #e7e7e7;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.mymiddle{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.mycopy{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+.myfootertitle{
+    font-weight: bold;
+}
+.plan{
+    border:1px solid #778899;
+    padding:0px;
+    min-height:180px;
+}
+.plantitle {
+    padding:10px;
+    text-align:center;
+    padding:10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color:#CDCDCD;
+    border-bottom: 1px solid #778899
+}
+.plancontent{
+    padding:10px;
+    text-align:center;
+    text-emphasis: heigh;
+}
+.plancontent p{
+        line-height: 1.1;
+}
+
+.active .plantitle {
+    padding:10px;
+    text-align:center;
+    padding:10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color:rgb(152, 198, 235);
+    border-bottom: 1px solid #113c44;
+}
+.active .plancontent{
+    padding:10px;
+    text-align:center;
+    text-emphasis: heigh;
+}
+.active .plancontent p{
+        line-height: 1.1;
+}
+.price{
+    font-weight: bold;
+    font-size: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+.mycarousel{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
