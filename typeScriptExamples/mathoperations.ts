@@ -1,5 +1,5 @@
 
-class Multiple{
+class MathCalculation{
     public result: number;
     constructor(){
 
@@ -47,11 +47,11 @@ class Multiple{
     }  
 }
 
-var addop = new Multiple();
-addop.calculation(10,20,'+');
-addop.calculation(50,20,'-');
-addop.calculation(50,20,'*');
-addop.calculation(10,20,'/');
-addop.calculation(10,20,'&');
+var mathop = new MathCalculation();
+mathop.calculation(10,20,'+');
+mathop.calculation(50,20,'-');
+mathop.calculation(50,20,'*');
+mathop.calculation(10,20,'/');
+mathop.calculation(10,20,'&');
 
 

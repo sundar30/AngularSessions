@@ -1,19 +1,19 @@
-var Multiple = /** @class */ (function () {
-    function Multiple() {
+var MathCalculation = /** @class */ (function () {
+    function MathCalculation() {
     }
-    Multiple.prototype.add = function (firstNumber, secondNumber) {
+    MathCalculation.prototype.add = function (firstNumber, secondNumber) {
         return firstNumber + secondNumber;
     };
-    Multiple.prototype.subtract = function (firstNumber, secondNumber) {
+    MathCalculation.prototype.subtract = function (firstNumber, secondNumber) {
         return firstNumber - secondNumber;
     };
-    Multiple.prototype.multiple = function (firstNumber, secondNumber) {
+    MathCalculation.prototype.multiple = function (firstNumber, secondNumber) {
         return firstNumber * secondNumber;
     };
-    Multiple.prototype.divide = function (firstNumber, secondNumber) {
+    MathCalculation.prototype.divide = function (firstNumber, secondNumber) {
         return firstNumber / secondNumber;
     };
-    Multiple.prototype.calculation = function (firstNumber, secondNumber, operator) {
+    MathCalculation.prototype.calculation = function (firstNumber, secondNumber, operator) {
         if (operator == "+") {
             this.result = this.add(firstNumber, secondNumber);
             // console.log("Your Addition result is ("+firstNumber+operator+secondNumber+") : " + this.result);
@@ -44,11 +44,11 @@ var Multiple = /** @class */ (function () {
             //console.log("Invalid operation. Please try again.....")
         }
     };
-    return Multiple;
+    return MathCalculation;
 }());
-var addop = new Multiple();
-addop.calculation(10, 20, '+');
-addop.calculation(50, 20, '-');
-addop.calculation(50, 20, '*');
-addop.calculation(10, 20, '/');
-addop.calculation(10, 20, '&');
+var mathop = new MathCalculation();
+mathop.calculation(10, 20, '+');
+mathop.calculation(50, 20, '-');
+mathop.calculation(50, 20, '*');
+mathop.calculation(10, 20, '/');
+mathop.calculation(10, 20, '&');
