@@ -1,0 +1,59 @@
+ <div *ngIf="selecteduser">
+  <h3><span *ngIf="modeoption=='edit';else view">Edit</span> User Details</h3>
+  <ng-template #view>View</ng-template>
+  <div *ngIf="modeoption=='edit';else viewtemplate">
+      <form #userForm="ngForm">
+        <div class="form-group">
+          <label>Name </label>
+          <input type="text" [(ngModel)]="selecteduser.name" name="name" class="form-control" placeholder="name">
+        </div>
+        <div class="form-group">
+          <label>UserName</label>
+          <input type="text" [(ngModel)]="selecteduser.username" class="form-control" name="username" placeholder="username">
+        </div>
+        <div class="form-group">
+            <label>City</label>
+            <input type="text" [(ngModel)]="selecteduser.city" class="form-control" name="city"  placeholder="city">
+        </div>
+        <div class="form-group">
+            <label>State</label>
+            <input type="text" [(ngModel)]="selecteduser.state" class="form-control" name="state" placeholder="state">
+        </div>
+        <div class="form-group">
+            <label>Postal Code</label>
+            <input type="text" [(ngModel)]="selecteduser.pincode" class="form-control"  name="postalcode" placeholder="postalcode">
+        </div> 
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+    <ng-template #viewtemplate>        
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">       
+              <tr>        
+                <td>Id</td>
+                <td>{{selecteduser.id}}</td>                  
+              </tr>
+              <tr>        
+                  <td>Name</td>
+                  <td>{{selecteduser.name}}</td>                  
+              </tr>
+              <tr>        
+                  <td>UserName</td>
+                  <td>{{selecteduser.username}}</td>                  
+              </tr>
+              <tr>        
+                  <td>City</td>
+                  <td>{{selecteduser.city}}</td>                  
+              </tr>
+              <tr>        
+                  <td>State</td>
+                  <td>{{selecteduser.state}}</td>                  
+              </tr>
+              <tr>        
+                  <td>Postal Code</td>
+                  <td>{{selecteduser.pincode}}</td>                  
+              </tr>               
+          </table>
+        </div>
+    </ng-template>
+</div>

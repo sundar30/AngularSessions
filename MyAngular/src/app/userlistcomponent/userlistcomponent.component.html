@@ -1,0 +1,29 @@
+<h2>Users List</h2>
+<div class="table-responsive">
+  <table class="table table-bordered table-hover">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Username</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Postal Code</th>
+      <th>Action</th>
+    </tr>
+    <ng-container *ngIf="usersList">
+      <tr *ngFor="let user of usersList">        
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.city}}</td>
+        <td>{{user.state}}</td>
+        <td>{{user.pincode}}</td>
+        <td><button (click)="editDetails(user)" class="btn btn-primary btn-xs">Edit</button>&nbsp;<button (click)="viewDetails(user)" class="btn btn-primary btn-xs">View</button></td>
+      </tr>
+    </ng-container>
+    <tr *ngIf="usersList.length==0">
+      <td colspan="7">No Users Found</td>
+    </tr>
+  </table>
+</div>
+<app-userlistdetailscomponent [list]="selectedUser" [mode]="mode"></app-userlistdetailscomponent>
