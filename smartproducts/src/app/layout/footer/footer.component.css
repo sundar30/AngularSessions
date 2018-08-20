@@ -1,0 +1,26 @@
+.myfooter {
+    background-color: #005a70;
+    padding-top: 15px;
+    color: #FFF;
+    padding-bottom: 15px;
+}
+
+.myfootertitle{
+    font-weight: bold;
+    color:#FFF;
+}
+
+.myfooter a{
+    color:#CCC;
+}
+
+.footer-copyright a{
+    color:#CCC;
+}
+
+.mycopy{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    color:#FFF;
+}

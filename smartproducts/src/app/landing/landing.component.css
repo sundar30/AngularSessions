@@ -1,0 +1,51 @@
+.plan{
+    border:1px solid #778899;
+    padding:0px;
+    min-height:180px;
+}
+.plantitle {
+    padding:10px;
+    text-align:center;
+    padding:10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color:#CDCDCD;
+    border-bottom: 1px solid #778899
+}
+.plancontent{
+    padding:10px;
+    text-align:center;
+    text-emphasis: heigh;
+}
+.plancontent p{
+        line-height: 1.1;
+}
+
+.active .plantitle {
+    padding:10px;
+    text-align:center;
+    padding:10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color:rgb(152, 198, 235);
+    border-bottom: 1px solid #113c44;
+}
+.active .plancontent{
+    padding:10px;
+    text-align:center;
+    text-emphasis: heigh;
+}
+.active .plancontent p{
+        line-height: 1.1;
+}
+.price{
+    font-weight: bold;
+    font-size: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+.mycarousel{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

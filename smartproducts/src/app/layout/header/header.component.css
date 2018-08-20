@@ -1,0 +1,35 @@
+.mynav {
+	background-color:#005a70;
+    color:#ffffff;
+  	border-radius:0;
+}
+  
+.mynav .navbar-nav > li > a {
+      color:#FFF;
+      font-weight: bold;
+}
+
+.mynav .navbar-nav > .active > a {
+    color: #005a70;
+    background-color:#CCC;
+    font-weight: bold;
+}
+      
+.mynav .navbar-nav > li > a:hover,
+.mynav .navbar-nav > li > a:focus,
+.mynav .navbar-nav > .active > a:hover,
+.mynav .navbar-nav > .active > a:focus,
+.mynav .navbar-nav > .open >a {
+    text-decoration: none;
+    background-color: #CCC;
+    color:#005a70;
+    font-weight: bold;
+}
+     
+.myheader .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+.myheader .navbar-brand>img {
+    padding: 7px 14px;
+}
