@@ -1,3 +1,30 @@
 .product-form{
     padding: 15px;
 }
+.product-details{
+    width:100%;
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+.product-name{
+    font-size: 25px;
+    font-weight: bold;
+    color: #005a70;
+}
+
+
+.product-price{
+    font-size: 28px;
+    font-weight: bold;
+    font-style: italic
+}
+
+.product-price-emi{
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    color:gray;
+    padding-top:5px;
+    padding-bottom: 10px;
+}

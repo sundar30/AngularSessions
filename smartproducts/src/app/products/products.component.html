@@ -1,34 +1,124 @@
 <div class="container-fluid product-form">
   <section class="section">
     <form #productForm="ngForm">
-      <div class="form-group">
-        <label for="productname">Product Name</label>
-        <input type="text" class="form-control" id="productname" placeholder="Product Name">
-      </div>
-      <div class="form-group">
-        <label for="price">Product Price</label>
-        <input type="text" class="form-control" id="price"  placeholder="Price">
-      </div>
-      <div class="form-group">
-        <label for="description">Product Description</label>
-        <textarea id="description" class="form-control"  placeholder="Description" rows="3"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label for="description">Is offer Product</label>
-        <div class="radio">
-          <label class="radio-inline">
-            <input type="radio" name="offeryes" id="inlineRadio1"  value=""> Yes
-          </label>
-          <label class="radio-inline">
-            <input type="radio" name="offerno" id="inlineRadio2"  value=""> No
-          </label>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="form-group">
+          <label for="productname">Product Name</label>
+          <input type="text" class="form-control" id="productname" placeholder="Product Name">
+        </div>
+        <div class="form-group">
+          <label for="price">Product Price</label>
+          <input type="text" class="form-control" id="price" placeholder="Price">
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Save</button>&nbsp;
-      <button type="button" class="btn btn-primary">Cancel</button>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="form-group">
+          <label for="price">Product Image</label>
+          <input type="text" class="form-control" id="price" placeholder="Price">
+        </div>
+        <div class="form-group">
+          <label for="description">Is offer Product</label>
+          <div class="radio">
+            <label class="radio-inline">
+              <input type="radio" name="offeryes" id="inlineRadio1" value=""> Yes
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="offerno" id="inlineRadio2" value=""> No
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="form-group">
+          <label for="description">Product Description</label>
+          <textarea id="description" maxlength="350" class="form-control" placeholder="Description" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Save Product</button>
+        </div>
+      </div>
     </form>
   </section>
 </div>
-<a routerLink="/details">Details</a>
-<router-outlet></router-outlet>
+<div class="container-fluid product-form">
+  <div class="row product-details">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <div class="product-image">
+        <img style="width:210px;height: 210px;" src="./../assets/custom/images/watch1.jpg" />
+      </div>
+    </div>
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+      <div class="product-description">
+        <div class="product-name">Fastrack 3166KM01 All Nighters Watch - For Men</div>
+        <div>
+          <button type="button" class="btn btn-success btn-xs">4.1 ★</button>
+        </div>
+        <div class="product-description">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+          text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+          book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+          unchanged.
+        </div>
+        <div class="product-specifications">
+          <ul>
+            <li>Watch Movement: Quartz</li>
+            <li>Water Resistant (50 m)</li>
+            <li>Display Type: Analog</li>
+            <li>Strap: Silver, Metal</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <div class="product-order">
+        <div class="product-price">Rs. 1500 /-</div>
+        <div class="product-price-emi">EMI 450/ Month</div>
+      </div>
+      <div class="product-button">
+        <button type="button" class="btn btn-primary btn-sm btn-block">Delete</button>
+      </div>
+    </div>
+  </div>
+  <div style="clear: both"></div>
+  <!-- Stary-->
+  <div class="row product-details">
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <div class="product-image">
+          <img style="width:210px;height: 210px;" src="./../assets/custom/images/watch1.jpg" />
+        </div>
+      </div>
+      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+        <div class="product-description">
+          <div class="product-name">Fastrack 3166KM01 All Nighters Watch - For Men</div>
+          <div>
+            <button type="button" class="btn btn-success btn-xs">4.1 ★</button>
+          </div>
+          <div class="product-description">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+            book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+            unchanged.
+          </div>
+          <div class="product-specifications">
+            <ul>
+              <li>Watch Movement: Quartz</li>
+              <li>Water Resistant (50 m)</li>
+              <li>Display Type: Analog</li>
+              <li>Strap: Silver, Metal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <div class="product-order">
+          <div class="product-price">Rs. 1500 /-</div>
+          <div class="product-price-emi">EMI 450/ Month</div>
+        </div>
+        <div class="product-button">
+          <button type="button" class="btn btn-primary btn-sm btn-block">Delete</button>
+        </div>
+      </div>
+    </div>
+    <div style="clear: both"></div>
+    <!-- end -->
+</div>
