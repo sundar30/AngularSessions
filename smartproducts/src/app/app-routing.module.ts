@@ -5,16 +5,16 @@ import { LandingComponent } from './landing/landing.component';
 //Services
 import { PlansService } from "./core/service/plans/plans.service";
 import { CarouselService } from "./core/service/carousel/carousel.service";
-import { ProductsComponent } from "./products/products.component"
+
 import { ContactusComponent } from './landing/contactus/contactus.component';
 import { LoginComponent } from './auth/login/login.component';
+import { ProductsComponent } from "./products/products.component";
 
-
-const routes: Routes = [
+const routes: Routes = [ 
   {
     path:'products',
     component: ProductsComponent
-  },
+  },  
   {
     path:'contactus',
     component: ContactusComponent
@@ -34,8 +34,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ContactusComponent,ProductsComponent,LoginComponent],
-  imports: [RouterModule.forRoot(routes)],
+  declarations: [ContactusComponent,LoginComponent],
+  imports: [RouterModule.forRoot(routes,
+    { enableTracing: true } )],
   exports: [RouterModule],
   providers: [PlansService,CarouselService]
 })

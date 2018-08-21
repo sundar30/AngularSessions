@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { LandingComponent } from './landing/landing.component';
-import { FormsModule }   from '@angular/forms';
+import { ProductsModule }   from './products/products.module';
 
 
 
@@ -25,7 +25,7 @@ import { FormsModule }   from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
