@@ -7,8 +7,8 @@
           <input type="text" class="form-control" name="productname" required id="productname" [(ngModel)]="product.productname" placeholder="Product Name">
         </div>
         <div class="form-group">
-          <label for="price">Product Price</label>
-          <input type="number" class="form-control" name="productprice" required id="productprice" [(ngModel)]="product.productprice"
+          <label for="price">Product Original Price</label>
+          <input type="number" class="form-control" min="1" name="productprice" required id="productprice" [(ngModel)]="product.productprice"
             placeholder="Price">
         </div>
       </div>
@@ -21,13 +21,13 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="description">Is offer Product</label>
+          <label for="description">Are you going to provide 10% offer for this Product? </label>
           <div class="radio">
             <label class="radio-inline">
-              <input type="radio" name="productoffer" id="inlineRadio1" [(ngModel)]="product.productoffer" required value="true"> Yes
+              <input type="radio" name="productoffer" id="inlineRadio1" [(ngModel)]="product.productoffer" required value="1"> Yes
             </label>
             <label class="radio-inline">
-              <input type="radio" name="productoffer" id="inlineRadio2" [(ngModel)]="product.productoffer" required value="flase"> No
+              <input type="radio" name="productoffer" id="inlineRadio2" [(ngModel)]="product.productoffer" required value="0"> No
             </label>
           </div>
         </div>
@@ -46,7 +46,7 @@
   </section>
 </div>
 <div class="container-fluid product-form">
-  <div *ngFor="let product of productsList" class="row product-details">
+  <div *ngFor="let product of productsList; let i=index" class="row product-details">
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
       <div class="product-image">
         <img style="width:210px;height: 210px;" src="./../assets/custom/images/{{product.productImage}}" />
@@ -73,11 +73,22 @@
     </div>
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
       <div class="product-order">
-        <div class="product-price">Rs.  {{product.productPrice}} /-</div>
-        <div class="product-price-emi">EMI 450/ Month</div>
+        <div class="product-price">
+          <span *ngIf="product.isOfferProduct==1; then offerPrice  else noOfferPrice"></span>
+          <ng-template #offerPrice>{{ offerPriceCalculation(product.productPrice) | currency }}
+            <p class="offernote">10% offer for this product</p> 
+            <p class="productoriginalprice"><del>{{product.productPrice | currency}}</del></p>
+          </ng-template>
+          <ng-template #noOfferPrice>{{ product.productPrice | currency }} </ng-template>
+        </div>
+        <div class="product-price-emi"> 
+          <span *ngIf="product.isOfferProduct==1; then offerEmiPrice  else noOfferEmiPrice"></span>
+          <ng-template #offerEmiPrice> EMI {{ (offerPriceCalculation(product.productPrice) / 12 ) | currency }} / Month </ng-template>
+          <ng-template #noOfferEmiPrice> EMI {{ (product.productPrice / 12 ) | currency }} / Month </ng-template>
+        </div>
       </div>
       <div class="product-button">
-        <button type="button" class="btn btn-primary btn-sm btn-block">Delete</button>
+        <button type="button" (click)="deleteProduct(product.id)" class="btn btn-primary btn-sm btn-block">Delete</button>
       </div>
     </div>
   </div>

@@ -17,6 +17,7 @@
 .product-price{
     font-size: 28px;
     font-weight: bold;
+    color:green;
     font-style: italic
 }
 
@@ -27,4 +28,13 @@
     color:gray;
     padding-top:5px;
     padding-bottom: 10px;
+}
+
+.productoriginalprice{
+    font-size: 25px;    
+    color:red;
+}
+.offernote{
+    font-size: 10px;
+    color:gray;
 }
