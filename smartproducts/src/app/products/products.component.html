@@ -1,29 +1,33 @@
 <div class="container-fluid product-form">
   <section class="section">
-    <form #productForm="ngForm">
+    <form #productForm="ngForm" (ngSubmit)="addProduct(productForm.value)">
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
         <div class="form-group">
           <label for="productname">Product Name</label>
-          <input type="text" class="form-control" id="productname" placeholder="Product Name">
+          <input type="text" class="form-control" name="productname" required id="productname" [(ngModel)]="product.productname" placeholder="Product Name">
         </div>
         <div class="form-group">
           <label for="price">Product Price</label>
-          <input type="text" class="form-control" id="price" placeholder="Price">
+          <input type="number" class="form-control" name="productprice" required id="productprice" [(ngModel)]="product.productprice"
+            placeholder="Price">
         </div>
       </div>
+
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
         <div class="form-group">
           <label for="price">Product Image</label>
-          <input type="text" class="form-control" id="price" placeholder="Price">
+          <select class="form-control" name="productimage" required id="productimage" [(ngModel)]="product.productimage">
+            <option *ngFor="let productImage of productImages" value="{{productImage}}">{{productImage}}</option>
+          </select>
         </div>
         <div class="form-group">
           <label for="description">Is offer Product</label>
           <div class="radio">
             <label class="radio-inline">
-              <input type="radio" name="offeryes" id="inlineRadio1" value=""> Yes
+              <input type="radio" name="productoffer" id="inlineRadio1" [(ngModel)]="product.productoffer" required value="true"> Yes
             </label>
             <label class="radio-inline">
-              <input type="radio" name="offerno" id="inlineRadio2" value=""> No
+              <input type="radio" name="productoffer" id="inlineRadio2" [(ngModel)]="product.productoffer" required value="flase"> No
             </label>
           </div>
         </div>
@@ -31,33 +35,31 @@
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="form-group">
           <label for="description">Product Description</label>
-          <textarea id="description" maxlength="350" class="form-control" placeholder="Description" rows="3"></textarea>
+          <textarea id="productdescription" name="productdescription" required maxlength="350" class="form-control" [(ngModel)]="product.productdescription"
+            placeholder="Description" rows="3"></textarea>
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-primary">Save Product</button>
+          <button [disabled]="!productForm.valid" type="submit" class="btn btn-primary">Save Product</button>
         </div>
       </div>
     </form>
   </section>
 </div>
 <div class="container-fluid product-form">
-  <div class="row product-details">
+  <div *ngFor="let product of productsList" class="row product-details">
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
       <div class="product-image">
-        <img style="width:210px;height: 210px;" src="./../assets/custom/images/watch1.jpg" />
+        <img style="width:210px;height: 210px;" src="./../assets/custom/images/{{product.productImage}}" />
       </div>
     </div>
     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
       <div class="product-description">
-        <div class="product-name">Fastrack 3166KM01 All Nighters Watch - For Men</div>
+        <div class="product-name">{{product.productName}}</div>
         <div>
           <button type="button" class="btn btn-success btn-xs">4.1 ★</button>
         </div>
         <div class="product-description">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-          text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-          book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-          unchanged.
+          {{product.productDescription}}
         </div>
         <div class="product-specifications">
           <ul>
@@ -71,7 +73,7 @@
     </div>
     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
       <div class="product-order">
-        <div class="product-price">Rs. 1500 /-</div>
+        <div class="product-price">Rs.  {{product.productPrice}} /-</div>
         <div class="product-price-emi">EMI 450/ Month</div>
       </div>
       <div class="product-button">
@@ -79,46 +81,4 @@
       </div>
     </div>
   </div>
-  <div style="clear: both"></div>
-  <!-- Stary-->
-  <div class="row product-details">
-      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-        <div class="product-image">
-          <img style="width:210px;height: 210px;" src="./../assets/custom/images/watch1.jpg" />
-        </div>
-      </div>
-      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-        <div class="product-description">
-          <div class="product-name">Fastrack 3166KM01 All Nighters Watch - For Men</div>
-          <div>
-            <button type="button" class="btn btn-success btn-xs">4.1 ★</button>
-          </div>
-          <div class="product-description">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-            text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-            book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-            unchanged.
-          </div>
-          <div class="product-specifications">
-            <ul>
-              <li>Watch Movement: Quartz</li>
-              <li>Water Resistant (50 m)</li>
-              <li>Display Type: Analog</li>
-              <li>Strap: Silver, Metal</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-        <div class="product-order">
-          <div class="product-price">Rs. 1500 /-</div>
-          <div class="product-price-emi">EMI 450/ Month</div>
-        </div>
-        <div class="product-button">
-          <button type="button" class="btn btn-primary btn-sm btn-block">Delete</button>
-        </div>
-      </div>
-    </div>
-    <div style="clear: both"></div>
-    <!-- end -->
 </div>
